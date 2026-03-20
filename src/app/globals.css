@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-surface: var(--surface);
+  --color-border-custom: var(--border);
+}
+
+:root {
+  --bg: #FFFFFF;
+  --bg-rgb: 255, 255, 255;
+  --text: #020617;
+  --text-rgb: 2, 6, 23;
+  --text-muted: #475569;
+  --accent: #1D4ED8;
+  --accent-hover: #2563EB;
+  --surface: #F8FAFC;
+  --border: #E2E8F0;
+}
+
+.dark {
+  --bg: #0B1120;
+  --bg-rgb: 11, 17, 32;
+  --text: #F9FAFB;
+  --text-rgb: 249, 250, 251;
+  --text-muted: #94A3B8;
+  --accent: #60A5FA;
+  --accent-hover: #93C5FD;
+  --surface: #0F172A;
+  --border: #1E293B;
+}
+
+@layer base {
+  * {
+    @apply border-border-custom;
+  }
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  h1, h2, h3 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+.fade-mask {
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background-color: var(--surface);
+}
+
+.btn-secondary:active {
+  transform: scale(0.97);
+}
