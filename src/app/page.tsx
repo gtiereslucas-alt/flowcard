@@ -10,6 +10,7 @@ import { ArrowRight, Wallet, ScanFace, Leaf } from "lucide-react";
 import { CardShowcaseSection } from "@/components/ui/CardShowcaseSection";
 import { MagicTapSection } from "@/components/ui/MagicTapSection";
 import { SaaSPlatformSection } from "@/components/ui/SaaSPlatformSection";
+import { VideoCodeSection } from "@/components/ui/VideoCodeSection";
 import { 
   AudiLogo, 
   BMWLogo, 
@@ -56,8 +57,7 @@ export default function Home() {
       <CardShowcaseSection />
       <MagicTapSection />
       <SaaSPlatformSection />
+      <VideoCodeSection />
     </>
   );
 }
-
-
