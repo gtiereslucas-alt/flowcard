@@ -255,7 +255,7 @@ export const SaaSPlatformSection = () => {
                               <div className="col-span-12 lg:col-span-7 space-y-12">
                                  <div className="space-y-4">
                                     <h5 className="text-3xl font-black text-white italic underline decoration-accent decoration-4 underline-offset-8">CRM Sync Engine</h5>
-                                    <p className="text-sm text-white/40 font-medium tracking-tight">Injection automatique des leads qualifiés.</p>
+                                    <p className="text-sm text-white/70 font-medium tracking-tight">Injection automatique des leads qualifiés.</p>
                                  </div>
 
                                  <div className="relative flex items-center justify-between gap-4 p-10 bg-[#0a0a0b] rounded-[2.5rem] border border-white/5 shadow-2xl">
@@ -269,7 +269,7 @@ export const SaaSPlatformSection = () => {
                                          <div className={`w-16 h-16 rounded-2xl flex items-center justify-center border-4 border-[#0c0c0d] shadow-2xl ${step.color} text-white`}>
                                             <step.icon size={28} />
                                          </div>
-                                         <span className="text-[10px] font-black uppercase tracking-widest text-white/30">{step.label}</span>
+                                         <span className="text-[10px] font-black uppercase tracking-widest text-white">{step.label}</span>
                                       </div>
                                     ))}
                                  </div>
