@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Users, Target, Briefcase, Zap, TrendingUp, BarChart, FileCheck, Mail, ArrowRight, MousePointer2 } from "lucide-react";
+import Link from "next/link";
 
 export default function ROICalculator() {
   // --- BUSINESS INPUTS ---
@@ -47,9 +48,9 @@ export default function ROICalculator() {
     <div className="w-full flex flex-col gap-12">
       
       {/* HEADER: Focus on Revenue, not Costs */}
-      <div className="text-center md:text-left flex flex-col gap-2 border-b border-border-custom pb-8">
-          <h2 className="text-3xl font-black tracking-tight">Cessez de perdre du Business.</h2>
-          <p className="text-text-muted font-medium">Calculez le CA dormant que vous ne transformez pas aujourd'hui.</p>
+      <div className="text-center md:text-left flex flex-col gap-4 border-b border-border-custom pb-12 mb-4">
+          <h2 className="text-4xl md:text-6xl font-[950] tracking-tighter leading-[0.9] italic">ARRÊTEZ L'HÉMORRAGIE <br /> DE LEADS.</h2>
+          <p className="text-xl text-text-muted font-medium opacity-70 italic max-w-xl line-clamp-2 italic">Convertissez le CA dormant que vous laissez aujourd'hui sur la table par manque de suivi.</p>
       </div>
 
       <div className="grid lg:grid-cols-2 gap-16">
@@ -180,9 +181,9 @@ export default function ROICalculator() {
               <button className="bg-surface border border-accent/30 text-accent font-black px-8 py-4 rounded-2xl hover:bg-accent/10 transition-all flex items-center gap-2 group">
                   <FileCheck size={20} /> Rapport ROI Complet (PDF)
               </button>
-              <button className="bg-foreground text-background font-black px-10 py-5 rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-[0_20px_40px_-10px_rgba(255,255,255,0.1)] flex items-center gap-3 group">
-                  Signer le bon de commande <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
-              </button>
+              <Link href="https://calendly.com/lucas-gomestieres-flowcard/30min" target="_blank" rel="noopener noreferrer" className="bg-foreground text-background font-black px-10 py-5 rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-[0_20px_40px_-10px_rgba(255,255,255,0.1)] flex items-center gap-3 group">
+                  Réserver ma consultation stratégique <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
           </div>
       </div>
 

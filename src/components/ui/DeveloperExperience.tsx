@@ -53,7 +53,7 @@ export const DeveloperExperience = () => {
   };
 
   return (
-    <section className="py-40 bg-[#020617] relative overflow-hidden">
+    <section className="py-40 bg-white dark:bg-[#020617] relative overflow-hidden">
       {/* Background patterns */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
            style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
@@ -67,7 +67,7 @@ export const DeveloperExperience = () => {
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-bold text-xs uppercase tracking-widest mb-4">
                         <Cpu size={16} /> Bâtir sur FlowCard
                     </div>
-                    <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-white mb-8">
+                    <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-foreground dark:text-white mb-8">
                         L'API pour <br/> <span className="text-blue-500 italic">l'Elite.</span>
                     </h2>
                     <p className="text-xl text-slate-400 font-medium leading-relaxed max-w-lg">
@@ -80,13 +80,13 @@ export const DeveloperExperience = () => {
                         <button 
                             key={idx}
                             onClick={() => setActiveStep(idx)}
-                            className={`flex items-start gap-6 p-6 rounded-3xl transition-all duration-500 text-left border ${activeStep === idx ? 'bg-white/5 border-white/10 shadow-2xl scale-105' : 'border-transparent opacity-40 hover:opacity-100'}`}
+                            className={`flex items-start gap-6 p-6 rounded-3xl transition-all duration-500 text-left border ${activeStep === idx ? 'bg-white/5 border-zinc-300 dark:border-white/10 shadow-2xl scale-105' : 'border-transparent opacity-40 hover:opacity-100'}`}
                         >
                             <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${activeStep === idx ? 'bg-blue-500 text-white' : 'bg-white/10 text-white'}`}>
                                 <Code2 size={20} />
                             </div>
                             <div>
-                                <h4 className="font-black text-lg text-white mb-1">{step.title}</h4>
+                                <h4 className="font-black text-lg text-foreground dark:text-white mb-1">{step.title}</h4>
                                 <p className="text-sm text-slate-400 font-medium">{step.desc}</p>
                             </div>
                         </button>
@@ -100,9 +100,9 @@ export const DeveloperExperience = () => {
                     {/* Shadow Decor */}
                     <div className="absolute -inset-10 bg-blue-500/20 rounded-full blur-[120px]" />
                     
-                    <div className="relative bg-[#0d1117] rounded-[2rem] border border-white/10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)] overflow-hidden">
+                    <div className="relative bg-[#0d1117] rounded-[2rem] border border-zinc-300 dark:border-white/10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)] overflow-hidden">
                         {/* IDE Header */}
-                        <div className="flex items-center justify-between px-6 py-4 bg-[#161b22] border-b border-white/5">
+                        <div className="flex items-center justify-between px-6 py-4 bg-[#161b22] border-b border-border-custom">
                             <div className="flex gap-2">
                                 <div className="w-3 h-3 rounded-full bg-red-500/50" />
                                 <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
@@ -138,7 +138,7 @@ export const DeveloperExperience = () => {
                         </div>
 
                         {/* Status Bar */}
-                        <div className="px-6 py-2 bg-[#161b22] border-t border-white/5 flex justify-between items-center text-[10px] text-slate-500 font-bold uppercase tracking-widest">
+                        <div className="px-6 py-2 bg-[#161b22] border-t border-border-custom flex justify-between items-center text-[10px] text-slate-500 font-bold uppercase tracking-widest">
                             <span>Ln: {codeSteps[activeStep].code.split('\n').length}, Col: 12</span>
                             <span className="text-blue-400">TypeScript</span>
                         </div>

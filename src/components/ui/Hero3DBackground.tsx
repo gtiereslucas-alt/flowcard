@@ -19,7 +19,7 @@ export const Hero3DBackground = ({ children }: { children?: React.ReactNode }) =
   }, []);
 
   return (
-    <section className={`relative min-h-[100vh] flex flex-col items-center justify-start overflow-hidden pt-10 transition-colors duration-700 ${isDark ? "bg-[#050505]" : "bg-white"}`}>
+    <section className={`relative min-h-[100vh] flex flex-col items-center justify-start overflow-hidden pt-10 transition-colors duration-700 ${isDark ? "bg-zinc-50 dark:bg-[#050505]" : "bg-white"}`}>
 
       {/* 1. CINEMATIC ATMOSPHERE (PLASMA ANIMATION) */}
       <motion.div
@@ -50,11 +50,11 @@ export const Hero3DBackground = ({ children }: { children?: React.ReactNode }) =
            {children}
         </div>
       ) : (
-        <div className="max-w-7xl mx-auto px-6 w-full flex flex-col items-center z-20">
+        <div className="max-w-7xl mx-auto px-6 w-full flex flex-col items-center z-20 lg:grid lg:grid-cols-[1fr_auto] lg:gap-20 lg:items-center lg:min-h-screen">
           {/* Default Hero Content */}
-          <motion.div className="flex flex-col items-center text-center pt-10 md:pt-12 relative z-30 w-full px-4 max-w-full">
+          <motion.div className="flex flex-col items-center text-center pt-10 md:pt-12 lg:pt-0 lg:items-start lg:text-left relative z-30 w-full px-4 max-w-full">
             <motion.div animate={{ y: [0, -15, 0], rotateX: [0, 5, 0], rotateY: [0, -5, 0] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}>
-              <h1 className={`text-6xl sm:text-8xl md:text-[15rem] lg:text-[18rem] font-black tracking-[-0.04em] leading-[0.85] mb-2 whitespace-pre-wrap break-words transition-colors duration-700 ${isDark ? "text-white drop-shadow-2xl" : "text-[#050505] shadow-none"}`}>
+              <h1 className={`text-6xl sm:text-8xl md:text-[8rem] lg:text-[5.5rem] xl:text-[7rem] font-black tracking-[-0.04em] leading-[0.85] mb-2 whitespace-pre-wrap break-words transition-colors duration-700 ${isDark ? "text-white drop-shadow-2xl" : "text-[#050505] shadow-none"}`}>
                 <motion.span initial={{ opacity: 0, y: 20, filter: "blur(10px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} transition={{ duration: 0.8, delay: 0.3 }} className={`block text-[12px] sm:text-[14px] uppercase tracking-[0.5em] font-bold mb-2 leading-relaxed transition-colors ${isDark ? "text-white/40" : "text-[#050505]/60"}`}>
                   Carte NFC Connectée
                 </motion.span>
@@ -66,11 +66,11 @@ export const Hero3DBackground = ({ children }: { children?: React.ReactNode }) =
                 </motion.span>
               </h1>
 
-              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: isDark ? 0.35 : 0.7, y: 0 }} transition={{ duration: 0.8, delay: 1.1 }} className={`text-[11px] md:text-[13px] font-medium max-w-[340px] mx-auto leading-relaxed mb-8 break-words tracking-tight transition-colors ${isDark ? "text-text-muted" : "text-[#050505]/80"}`}>
-                Partagez votre univers instantanément <br /> et propulsez vos opportunités.
+              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: isDark ? 0.35 : 0.7, y: 0 }} transition={{ duration: 0.8, delay: 1.1 }} className={`text-[11px] md:text-[14px] lg:text-base font-medium max-w-[340px] mx-auto lg:mx-0 lg:max-w-[480px] leading-relaxed mb-8 break-words tracking-tight transition-colors ${isDark ? "text-text-muted" : "text-[#050505]/80"}`}>
+                Partagez votre univers instantanément <br className="lg:hidden" /> et propulsez vos opportunités.
               </motion.p>
-              
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.3 }} className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
+
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.3 }} className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-6 mb-8">
                 <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
                   <Link href="https://calendly.com/lucas-gomestieres-flowcard/30min" target="_blank" rel="noopener noreferrer" className="group relative px-10 py-4 bg-accent rounded-full text-base font-black text-white shadow-[0_20px_60px_-10px_rgba(37,99,235,0.6)] flex items-center gap-3 overflow-hidden whitespace-nowrap">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
@@ -78,7 +78,7 @@ export const Hero3DBackground = ({ children }: { children?: React.ReactNode }) =
                   </Link>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
-                  <Link href="/solution" className={`px-10 py-4 rounded-full text-base font-bold border transition-all backdrop-blur-md ${isDark ? "text-white/70 border-white/10 hover:bg-white/5 hover:text-white" : "text-[#050505]/80 border-[#050505]/20 hover:bg-[#050505]/5 hover:text-[#050505]"}`}>
+                  <Link href="/solution" className={`px-10 py-4 rounded-full text-base font-bold border transition-all backdrop-blur-md ${isDark ? "text-white/70 border-white/10 hover:bg-white/5 hover:text-white" : "text-[#050505]/80 border-[#050505]/20 hover:bg-zinc-50/50 hover:text-[#050505]"}`}>
                     En savoir plus
                   </Link>
                 </motion.div>
@@ -86,7 +86,7 @@ export const Hero3DBackground = ({ children }: { children?: React.ReactNode }) =
             </motion.div>
           </motion.div>
 
-          <div className="w-full max-w-[450px] flex justify-center relative z-40 min-w-0 pb-10 md:pb-20">
+          <div className="w-full max-w-[450px] lg:max-w-[480px] xl:max-w-[520px] flex justify-center relative z-40 min-w-0 pb-10 md:pb-20 lg:pb-0">
             <FadeIn delay={0.4} duration={1.2} className="w-full relative flex justify-center">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-accent/5 blur-[120px] rounded-full opacity-30 pointer-events-none" />
               <HeroMockup />

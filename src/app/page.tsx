@@ -7,17 +7,27 @@ import { HeroMockup } from "@/components/ui/HeroMockup";
 import { Hero3DBackground } from "@/components/ui/Hero3DBackground";
 import { StaggerContainer, StaggerItem } from "@/components/ui/StaggerContainer";
 import { ArrowRight, Wallet, ScanFace, Leaf } from "lucide-react";
-import { CardShowcaseSection } from "@/components/ui/CardShowcaseSection";
+import { FlowCardTrioSection } from "@/components/ui/FlowCardTrioSection";
+import { HowItWorksSection } from "@/components/ui/HowItWorksSection";
+import { ComparisonSection } from "@/components/ui/ComparisonSection";
+import { KeyBenefitsSection } from "@/components/ui/KeyBenefitsSection";
+import { ServiceExpertiseSection } from "@/components/ui/ServiceExpertiseSection";
+import { TestimonialsSection } from "@/components/ui/TestimonialsSection";
+import { FinalCTASection } from "@/components/ui/FinalCTASection";
+
+// Kept from original architecture or added for complete presentation:
+import { ShowcaseCardSection } from "@/components/ui/ShowcaseCardSection";
 import { MagicTapSection } from "@/components/ui/MagicTapSection";
+import { AudienceSection } from "@/components/ui/AudienceSection";
+import { BeforeAfterSection } from "@/components/ui/BeforeAfterSection";
 import { SaaSPlatformSection } from "@/components/ui/SaaSPlatformSection";
-import { VideoCodeSection } from "@/components/ui/VideoCodeSection";
-import { 
-  AudiLogo, 
-  BMWLogo, 
-  BasicFitLogo, 
-  Century21Logo, 
-  ERALogo, 
-  FitnessParkLogo 
+import {
+  AudiLogo,
+  BMWLogo,
+  BasicFitLogo,
+  Century21Logo,
+  ERALogo,
+  FitnessParkLogo
 } from "@/components/ui/BrandLogos";
 
 export default function Home() {
@@ -54,10 +64,21 @@ export default function Home() {
         </FadeIn>
       </section>
 
-      <CardShowcaseSection />
+      {/* THE COMPLETE PRESENTATION FLOW */}
+      <ShowcaseCardSection />
       <MagicTapSection />
+      <BeforeAfterSection />
+      <AudienceSection />
+      
+      <FlowCardTrioSection />
+      <HowItWorksSection />
       <SaaSPlatformSection />
-      <VideoCodeSection />
+      <ComparisonSection />
+      
+      <KeyBenefitsSection />
+      <ServiceExpertiseSection />
+      <TestimonialsSection />
+      <FinalCTASection />
     </>
   );
 }

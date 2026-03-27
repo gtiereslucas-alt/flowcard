@@ -80,12 +80,12 @@ export function HeroMockup() {
           <div className="absolute top-[190px] -right-[2px] w-[3px] h-[90px] bg-[#333] rounded-r-md" /> {/* Power */}
 
           {/* --- IPHONE SCREEN (BEZEL INNER BORDER) --- */}
-          <div className={`w-full h-full rounded-[2.6rem] md:rounded-[3.1rem] overflow-hidden relative shadow-inner transition-colors duration-1000 ${step === 0 ? "bg-black" : (isDarkMode ? "bg-slate-50" : "bg-[#050505]")}`}>
+          <div className={`w-full h-full rounded-[2.6rem] md:rounded-[3.1rem] overflow-hidden relative shadow-inner transition-colors duration-1000 ${step === 0 ? "bg-black" : (isDarkMode ? "bg-slate-50" : "bg-zinc-50 dark:bg-[#050505]")}`}>
 
             {/* DYNAMIC ISLAND */}
             <motion.div
               layout
-              className="absolute top-2 md:top-3 left-1/2 -translate-x-1/2 w-[90px] md:w-[110px] h-[24px] md:h-[28px] bg-black rounded-full z-[100] flex items-center justify-between px-3 shadow-[0_0_10px_rgba(0,0,0,0.5)] border border-white/5"
+              className="absolute top-2 md:top-3 left-1/2 -translate-x-1/2 w-[90px] md:w-[110px] h-[24px] md:h-[28px] bg-black rounded-full z-[100] flex items-center justify-between px-3 shadow-[0_0_10px_rgba(0,0,0,0.5)] border border-border-custom"
             >
               {/* Camera / Sensors */}
               <div className="w-2 h-2 rounded-full bg-[#111] shadow-inner flex items-center justify-center">
@@ -125,9 +125,9 @@ export function HeroMockup() {
 
                   {/* LOCKSCREEN CLOCK */}
                   <div className="mt-16 text-center z-10 w-full">
-                    <div className="flex justify-center mb-1 text-white/40"><Zap size={14} fill="currentColor" /></div>
-                    <span className="text-[11px] font-bold text-white/80 uppercase tracking-widest">{new Intl.DateTimeFormat('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date())}</span>
-                    <h2 className="text-[5rem] font-medium text-white tracking-tighter mt-0 leading-none" style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}>{currentTime}</h2>
+                    <div className="flex justify-center mb-1 text-zinc-500 dark:text-white/40"><Zap size={14} fill="currentColor" /></div>
+                    <span className="text-[11px] font-bold text-zinc-800 dark:text-white/80 uppercase tracking-widest">{new Intl.DateTimeFormat('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date())}</span>
+                    <h2 className="text-[5rem] font-medium text-foreground dark:text-white tracking-tighter mt-0 leading-none" style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}>{currentTime}</h2>
                   </div>
 
                   {/* NFC LIVE ACTIVITY (Appears in Step 2) */}
@@ -138,18 +138,18 @@ export function HeroMockup() {
                     className="absolute bottom-32 left-4 right-4 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[2rem] p-4 flex items-center gap-4 z-[100] shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
                   >
                     <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(37,99,235,0.5)]">
-                      <Wifi size={18} className="text-white" />
+                      <Wifi size={18} className="text-foreground dark:text-white" />
                     </div>
                     <div className="flex flex-col text-left">
-                      <span className="text-[10px] font-bold text-white/50 uppercase tracking-widest leading-none mb-1">FlowCard Access</span>
-                      <p className="text-[13px] font-semibold text-white leading-none">Scanning...</p>
+                      <span className="text-[10px] font-bold text-zinc-500 dark:text-white/50 uppercase tracking-widest leading-none mb-1">FlowCard Access</span>
+                      <p className="text-[13px] font-semibold text-foreground dark:text-white leading-none">Scanning...</p>
                     </div>
                   </motion.div>
 
                   {/* BOTTOM ACTION BUTTONS */}
                   <div className="w-full flex justify-between items-center mb-4 z-10 px-2 opacity-80">
-                    <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-3xl flex items-center justify-center text-white"><Star size={20} strokeWidth={2} /></div>
-                    <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-3xl flex items-center justify-center text-white"><Battery size={20} className="rotate-90" strokeWidth={2} /></div>
+                    <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-3xl flex items-center justify-center text-foreground dark:text-white"><Star size={20} strokeWidth={2} /></div>
+                    <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-3xl flex items-center justify-center text-foreground dark:text-white"><Battery size={20} className="rotate-90" strokeWidth={2} /></div>
                   </div>
 
                   {/* HOME BAR */}
@@ -165,7 +165,7 @@ export function HeroMockup() {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                  className="w-full h-full flex flex-col items-center pt-8 relative overflow-hidden bg-slate-50 dark:bg-[#050505]"
+                  className="w-full h-full flex flex-col items-center pt-8 relative overflow-hidden bg-background dark:bg-[#050505]"
                 >
                   {/* Premium Banner Background with Glassmorphic Mesh */}
                   <div className="absolute top-0 left-0 w-full h-44 bg-gradient-to-br from-blue-100 via-white to-blue-50 dark:from-[#0f172a] dark:via-[#111] dark:to-black" />
@@ -219,14 +219,14 @@ export function HeroMockup() {
                       className="grid grid-cols-2 gap-3 w-full mb-6"
                     >
                       {/* Phone Card */}
-                      <div className="p-4 rounded-[1.2rem] flex flex-col items-center justify-center gap-2.5 bg-white dark:bg-[#111] shadow-sm border border-slate-100 dark:border-white/5">
+                      <div className="p-4 rounded-[1.2rem] flex flex-col items-center justify-center gap-2.5 bg-white dark:bg-[#111] shadow-sm border border-slate-100 dark:border-border-custom">
                         <div className="w-11 h-11 rounded-full bg-blue-500/10 dark:bg-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-500">
                           <Phone size={18} fill="currentColor" className="opacity-80" />
                         </div>
                         <span className="text-[11px] font-bold text-slate-700 dark:text-slate-300">Appeler</span>
                       </div>
                       {/* Email Card */}
-                      <div className="p-4 rounded-[1.2rem] flex flex-col items-center justify-center gap-2.5 bg-white dark:bg-[#111] shadow-sm border border-slate-100 dark:border-white/5">
+                      <div className="p-4 rounded-[1.2rem] flex flex-col items-center justify-center gap-2.5 bg-white dark:bg-[#111] shadow-sm border border-slate-100 dark:border-border-custom">
                         <div className="w-11 h-11 rounded-full bg-purple-500/10 dark:bg-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-500">
                           <Mail size={18} fill="currentColor" className="opacity-80" />
                         </div>
@@ -239,7 +239,7 @@ export function HeroMockup() {
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.5, delay: 0.6 }}
-                      className="w-full flex justify-between px-4 py-3 bg-white/50 dark:bg-white/5 backdrop-blur-xl rounded-2xl border border-slate-200/50 dark:border-white/10"
+                      className="w-full flex justify-between px-4 py-3 bg-white/50 dark:bg-white/5 backdrop-blur-xl rounded-2xl border border-slate-200/50 dark:border-zinc-300 dark:border-white/10"
                     >
                       {[
                         { Icon: Linkedin, color: "text-[#0077b5]" },
@@ -247,7 +247,7 @@ export function HeroMockup() {
                         { Icon: Globe, color: "text-slate-600 dark:text-slate-400" },
                         { Icon: Calendar, color: "text-slate-800 dark:text-white" }
                       ].map(({ Icon, color }, i) => (
-                        <div key={i} className="w-12 h-12 rounded-full flex items-center justify-center bg-white dark:bg-[#1a1a1c] shadow-sm border border-slate-100 dark:border-white/5 hover:scale-105 transition-transform cursor-pointer">
+                        <div key={i} className="w-12 h-12 rounded-full flex items-center justify-center bg-white dark:bg-[#1a1a1c] shadow-sm border border-slate-100 dark:border-border-custom hover:scale-105 transition-transform cursor-pointer">
                           <Icon size={18} className={color} />
                         </div>
                       ))}
@@ -287,8 +287,8 @@ export function HeroMockup() {
 
               <div className="flex flex-col">
                 <div className="h-1 w-10 bg-blue-600 rounded-full mb-2" />
-                <span className="text-[12px] font-black uppercase tracking-[0.2em] text-white">FlowCard Elite</span>
-                <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-white/50 mt-1">Lucas Gomes Tieres</span>
+                <span className="text-[12px] font-black uppercase tracking-[0.2em] text-foreground dark:text-white">FlowCard Elite</span>
+                <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-zinc-500 dark:text-white/50 mt-1">Lucas Gomes Tieres</span>
               </div>
             </motion.div>
           )}

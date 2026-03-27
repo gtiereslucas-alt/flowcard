@@ -22,7 +22,7 @@ const NetworkNode = ({ icon: Icon, label, delay = 0, className = "" }: any) => (
     transition={{ delay, type: "spring", stiffness: 100 }}
     className={`group relative flex flex-col items-center ${className}`}
   >
-    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-surface border border-white/5 flex items-center justify-center text-text-muted group-hover:text-accent group-hover:border-accent/40 group-hover:shadow-[0_0_30px_rgba(37,99,235,0.2)] transition-all duration-500 backdrop-blur-xl">
+    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-surface border border-border-custom flex items-center justify-center text-text-muted group-hover:text-accent group-hover:border-accent/40 group-hover:shadow-[0_0_30px_rgba(37,99,235,0.2)] transition-all duration-500 backdrop-blur-xl">
       <Icon size={24} />
       <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-accent rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity" />
     </div>
@@ -43,7 +43,7 @@ export const ManagedProfileSection = () => {
             <div className="inline-flex items-center gap-2 text-accent font-bold text-xs uppercase tracking-[0.4em] mb-6">
               <Zap size={16} /> Service Conciergerie
             </div>
-            <h2 className="text-5xl md:text-[5.5rem] font-black tracking-tighter leading-[0.9] text-white mb-10">
+            <h2 className="text-5xl md:text-[5.5rem] font-black tracking-tighter leading-[0.9] text-foreground dark:text-white mb-10">
               Votre Profil <br/> 
               <span className="text-accent underline decoration-accent/20 underline-offset-[12px]">Clef en Main.</span>
             </h2>
@@ -67,7 +67,7 @@ export const ManagedProfileSection = () => {
                         <div className="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-4 group-hover:bg-accent group-hover:text-white transition-all duration-500">
                            <ShieldCheck size={18} />
                         </div>
-                        <h4 className="text-lg font-black text-white mb-2">{item.title}</h4>
+                        <h4 className="text-lg font-black text-foreground dark:text-white mb-2">{item.title}</h4>
                         <p className="text-sm text-text-muted leading-tight">{item.desc}</p>
                     </motion.div>
                 ))}
@@ -85,8 +85,8 @@ export const ManagedProfileSection = () => {
                         transition={{ duration: 4, repeat: Infinity }}
                         className="w-28 h-28 md:w-36 md:h-36 rounded-[2.5rem] bg-accent flex flex-col items-center justify-center p-6 shadow-[0_0_80px_rgba(37,99,235,0.5)] z-30 border border-white/20"
                     >
-                        <Users size={40} className="text-white mb-2" />
-                        <span className="text-[9px] font-black uppercase tracking-[0.2em] text-white">Central Hub</span>
+                        <Users size={40} className="text-foreground dark:text-white mb-2" />
+                        <span className="text-[9px] font-black uppercase tracking-[0.2em] text-foreground dark:text-white">Central Hub</span>
                     </motion.div>
 
                     {/* CONNECTIONS (SVG Lines) */}
@@ -118,11 +118,11 @@ export const ManagedProfileSection = () => {
                     </button>
                 </motion.div>
                 
-                <div className="mt-8 bg-surface/80 backdrop-blur-2xl px-6 py-4 rounded-2xl border border-white/10 shadow-2xl flex items-center gap-4">
+                <div className="mt-8 bg-surface/80 backdrop-blur-2xl px-6 py-4 rounded-2xl border border-zinc-300 dark:border-white/10 shadow-2xl flex items-center gap-4">
                     <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-500">
                         <Zap size={20} />
                     </div>
-                    <p className="text-xs font-bold text-white leading-tight">Expert dédié assigné dès votre commande.</p>
+                    <p className="text-xs font-bold text-foreground dark:text-white leading-tight">Expert dédié assigné dès votre commande.</p>
                 </div>
             </div>
         </div>

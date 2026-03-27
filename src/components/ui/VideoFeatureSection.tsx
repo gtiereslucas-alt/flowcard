@@ -19,7 +19,7 @@ export const VideoFeatureSection = () => {
                 </div>
                 <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-8">
                     Plus qu'une carte. <br/>
-                    <span className="text-white/50">Un standard technologique.</span>
+                    <span className="text-zinc-500 dark:text-white/50">Un standard technologique.</span>
                 </h2>
             </FadeIn>
         </div>
@@ -44,8 +44,8 @@ export const VideoFeatureSection = () => {
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20 animate-pulse" />
                     
                     <div className="absolute bottom-10 left-10 z-20">
-                        <h4 className="text-2xl font-black text-white mb-2">Démo Interactive IA</h4>
-                        <p className="text-white/60 font-medium">Découvrez comment notre scan haute précision digitalise vos prospects.</p>
+                        <h4 className="text-2xl font-black text-foreground dark:text-white mb-2">Démo Interactive IA</h4>
+                        <p className="text-zinc-600 dark:text-white/60 font-medium">Découvrez comment notre scan haute précision digitalise vos prospects.</p>
                     </div>
                 </div>
             </FadeIn>
@@ -54,13 +54,13 @@ export const VideoFeatureSection = () => {
             <div className="flex flex-col gap-6 lg:justify-between">
                 <FadeIn delay={0.2} className="bg-surface p-8 rounded-[2.5rem] border border-border-custom hover:border-accent/40 transition-colors">
                     <Smartphone size={32} className="text-accent mb-6" />
-                    <h5 className="text-xl font-black mb-3 text-white">Application Native</h5>
+                    <h5 className="text-xl font-black mb-3 text-foreground dark:text-white">Application Native</h5>
                     <p className="text-text-muted text-sm leading-relaxed">Une expérience fluide sur iOS et Android pour gérer votre flotte en temps réel.</p>
                 </FadeIn>
                 
                 <FadeIn delay={0.3} className="bg-surface p-8 rounded-[2.5rem] border border-border-custom hover:border-accent/40 transition-colors">
                     <Layers size={32} className="text-purple-400 mb-6" />
-                    <h5 className="text-xl font-black mb-3 text-white">Multi-profils</h5>
+                    <h5 className="text-xl font-black mb-3 text-foreground dark:text-white">Multi-profils</h5>
                     <p className="text-text-muted text-sm leading-relaxed">Un profil pro et un profil perso sur la même carte. Switch intelligent par NFC.</p>
                 </FadeIn>
             </div>

@@ -88,7 +88,7 @@ await card.deployToNFC();`;
   };
 
   return (
-    <section ref={containerRef} className={`py-24 md:py-48 relative overflow-hidden transition-colors duration-700 ${isDark ? "bg-[#050505]" : "bg-[#f8fafc]"} border-t border-border-custom`}>
+    <section ref={containerRef} className={`py-24 md:py-48 relative overflow-hidden transition-colors duration-700 ${isDark ? "bg-zinc-50 dark:bg-[#050505]" : "bg-[#f8fafc]"} border-t border-border-custom`}>
       <div className="absolute top-[20%] left-[20%] w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] pointer-events-none" />
       
       <div className="container mx-auto px-6">
@@ -112,10 +112,10 @@ await card.deployToNFC();`;
             <div className="absolute -inset-10 bg-accent/10 blur-[100px] rounded-[5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
             
             <motion.div 
-                className={`relative rounded-[3rem] border shadow-2xl overflow-hidden flex flex-col lg:flex-row transform-gpu transition-colors duration-700 ${isDark ? "bg-[#0a0a0b] border-white/10" : "bg-white border-black/5"}`}
+                className={`relative rounded-[3rem] border shadow-2xl overflow-hidden flex flex-col lg:flex-row transform-gpu transition-colors duration-700 ${isDark ? "bg-white dark:bg-[#0A0A0B] border-zinc-300 dark:border-white/10" : "bg-white border-black/5"}`}
             >
-                <div className={`w-full lg:w-[55%] flex flex-col border-b lg:border-b-0 lg:border-r ${isDark ? "border-white/10" : "border-black/5"}`}>
-                    <div className={`flex items-center gap-2 px-8 py-5 border-b ${isDark ? "bg-white/5 border-white/5" : "bg-black/[0.02] border-black/5"}`}>
+                <div className={`w-full lg:w-[55%] flex flex-col border-b lg:border-b-0 lg:border-r ${isDark ? "border-zinc-300 dark:border-white/10" : "border-black/5"}`}>
+                    <div className={`flex items-center gap-2 px-8 py-5 border-b ${isDark ? "bg-white/5 border-border-custom" : "bg-black/[0.02] border-black/5"}`}>
                         <div className="flex gap-1.5">
                             <div className="w-3 h-3 rounded-full bg-red-500/20" />
                             <div className="w-3 h-3 rounded-full bg-yellow-500/20" />
@@ -141,7 +141,7 @@ await card.deployToNFC();`;
                 <div className={`w-full lg:w-[45%] relative overflow-hidden flex items-center justify-center p-20 min-h-[500px] transition-colors duration-700 ${isDark ? "bg-[#111]" : "bg-slate-50"}`}>
                     <div className={`absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:30px_30px] ${!isDark && "invert opacity-10"}`} />
 
-                    <div className={`absolute top-8 right-8 flex items-center gap-2 px-4 py-2 rounded-full border backdrop-blur-md ${isDark ? "bg-black/50 border-white/10" : "bg-white/50 border-black/10"}`}>
+                    <div className={`absolute top-8 right-8 flex items-center gap-2 px-4 py-2 rounded-full border backdrop-blur-md ${isDark ? "bg-black/50 border-zinc-300 dark:border-white/10" : "bg-white/50 border-black/10"}`}>
                         <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                         <span className={`text-[10px] font-black uppercase tracking-widest ${isDark ? "text-white" : "text-black"}`}>Real-time render</span>
                     </div>
@@ -154,9 +154,7 @@ await card.deployToNFC();`;
                             boxShadow: hasColor ? "0 30px 60px -15px rgba(37,99,235,0.4)" : "0 30px 60px -15px rgba(0,0,0,0.1)"
                         }}
                         transition={{ duration: hasDeployed ? 2 : 1, type: "spring", bounce: 0.3 }}
-                        className={`relative w-[280px] aspect-[1.58/1] rounded-3xl border flex flex-col justify-between p-8 transform-gpu transition-all duration-700
-                            ${hasMaterial ? (isDark ? 'bg-surface border-white/20' : 'bg-white border-black/10 shadow-xl') : 'bg-black/5 border-black/10 border-dashed'}
-                        `}
+                        className={`relative w-[280px] aspect-[1.58/1] rounded-3xl border flex flex-col justify-between p-8 transform-gpu transition-all duration-700 ${hasMaterial ? (isDark ? 'bg-surface border-white/20' : 'bg-white border-black/10 shadow-xl') : 'bg-black/5 border-black/10 border-dashed'} `}
                     >
                         {isDark && <div className={`absolute inset-0 bg-gradient-to-br from-white/10 to-transparent mix-blend-overlay rounded-3xl transition-opacity duration-1000 ${hasMaterial ? 'opacity-100' : 'opacity-0'}`} />}
 

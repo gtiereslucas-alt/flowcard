@@ -77,20 +77,20 @@ export const UseCasesSection = () => {
 
                 {/* Content */}
                 <div className="relative z-10 h-full p-12 flex flex-col justify-end">
-                  <div className={`w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white mb-8 group-hover:bg-accent group-hover:text-white transition-all duration-500`}>
+                  <div className={`w-14 h-14 rounded-2xl bg-white/5 border border-zinc-300 dark:border-white/10 flex items-center justify-center text-foreground dark:text-white mb-8 group-hover:bg-accent group-hover:text-white transition-all duration-500`}>
                     <uc.icon size={28} />
                   </div>
                   
                   <div className="space-y-4">
                     <span className="text-[10px] font-black uppercase tracking-[0.4em] text-accent">{uc.persona}</span>
-                    <h3 className="text-3xl font-black text-white">{uc.title}</h3>
+                    <h3 className="text-3xl font-black text-foreground dark:text-white">{uc.title}</h3>
                     <p className="text-text-muted text-sm leading-relaxed max-w-sm mb-8 transition-colors group-hover:text-white/60">
                       {uc.desc}
                     </p>
                     
                     <div className="flex flex-wrap gap-2 pt-4">
                       {uc.tags.map((tag) => (
-                        <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/5 text-[10px] font-bold text-white/40 group-hover:text-white/80 transition-colors uppercase tracking-widest">
+                        <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-border-custom text-[10px] font-bold text-zinc-500 dark:text-white/40 group-hover:text-white/80 transition-colors uppercase tracking-widest">
                           {tag}
                         </span>
                       ))}
@@ -98,7 +98,7 @@ export const UseCasesSection = () => {
                   </div>
 
                   {/* Corner Arrow */}
-                  <div className="absolute top-12 right-12 w-12 h-12 rounded-full border border-white/5 flex items-center justify-center text-white/20 group-hover:bg-white group-hover:text-black transition-all">
+                  <div className="absolute top-12 right-12 w-12 h-12 rounded-full border border-border-custom flex items-center justify-center text-white/20 group-hover:bg-white group-hover:text-black transition-all">
                     <ArrowRight size={20} />
                   </div>
                 </div>

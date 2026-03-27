@@ -41,11 +41,11 @@ export const CodeSection = () => {
             
             <div className="grid grid-cols-2 gap-6 mt-4">
                 <div className="flex flex-col gap-2">
-                    <Database className="text-white" size={24} />
+                    <Database className="text-foreground dark:text-white" size={24} />
                     <span className="font-bold">Webhooks Temps Réel</span>
                 </div>
                 <div className="flex flex-col gap-2">
-                    <ShieldCheck className="text-white" size={24} />
+                    <ShieldCheck className="text-foreground dark:text-white" size={24} />
                     <span className="font-bold">Sécurité Enterprise</span>
                 </div>
             </div>
@@ -58,7 +58,7 @@ export const CodeSection = () => {
             {/* Glow behind */}
             <div className="absolute -inset-2 bg-gradient-to-r from-accent to-purple-600 rounded-[2rem] blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
             
-            <div className="relative bg-[#0d1117] rounded-[1.5rem] p-8 border border-white/10 shadow-2xl font-mono text-sm leading-relaxed overflow-hidden">
+            <div className="relative bg-[#0d1117] rounded-[1.5rem] p-8 border border-zinc-300 dark:border-white/10 shadow-2xl font-mono text-sm leading-relaxed overflow-hidden">
                 {/* Terminal Header */}
                 <div className="flex gap-1.5 mb-6">
                     <div className="w-3 h-3 rounded-full bg-red-500/50" />

@@ -48,7 +48,7 @@ export const CardShowcaseSection = () => {
                     visible: { opacity: 1, y: 0, scale: 1 },
                     hidden: { opacity: 0, y: 15, scale: 0.98 }
                 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                   className="text-5xl md:text-[6.5rem] font-black tracking-tighter mb-2 md:mb-3 leading-[1] md:leading-[0.8]"
+                   className="text-5xl md:text-[5rem] lg:text-[5.5rem] xl:text-[6.5rem] font-black tracking-tighter mb-2 md:mb-3 leading-[1] md:leading-[0.85]"
                 >
                     Votre image, <br/> Sans aucune <span className="bg-gradient-to-r from-accent to-accent-hover text-transparent bg-clip-text italic text-[1em]">Limite.</span>
                 </motion.h2>
@@ -57,12 +57,12 @@ export const CardShowcaseSection = () => {
                     visible: { opacity: 0.5, y: 0 },
                     hidden: { opacity: 0, y: 5 }
                 }} transition={{ duration: 1 }}
-                   className="text-[10px] md:text-[12px] text-text-muted leading-relaxed font-medium max-w-[320px] md:max-w-[400px] mx-auto"
+                   className="text-[11px] md:text-sm lg:text-base text-text-muted leading-relaxed font-medium max-w-[320px] md:max-w-[480px] mx-auto"
                 >
                     FlowCard devient le prolongement de votre identité. <br /> Logo, couleurs, gravure laser ou impression HD :<br />créez une carte qui ne ressemble qu'à vous.
                 </motion.p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-4xl px-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 w-full max-w-4xl lg:max-w-5xl px-2">
                     {/* Feature 1: Personalization */}
                     <motion.div 
                         variants={{
@@ -80,7 +80,7 @@ export const CardShowcaseSection = () => {
                             type: "spring",
                             stiffness: 120
                         }}
-                        className="group relative flex flex-col items-center gap-4 md:gap-6 text-center p-8 md:p-10 bg-surface/40 backdrop-blur-3xl rounded-[2.5rem] md:rounded-[3rem] border border-white/5 hover:border-accent/40 transition-all duration-500 shadow-2xl overflow-hidden touch-none"
+                        className="group relative flex flex-col items-center gap-4 md:gap-6 text-center p-8 md:p-10 bg-surface/40 backdrop-blur-3xl rounded-[2.5rem] md:rounded-[3rem] border border-border-custom hover:border-accent/40 transition-all duration-500 shadow-2xl overflow-hidden touch-none"
                     >
                         {/* CUSTOM SPOTLIGHT CURSOR EFFECT */}
                         <div 
@@ -95,7 +95,7 @@ export const CardShowcaseSection = () => {
                         </div>
                         
                         <div className="relative z-10">
-                            <h4 className="text-xl md:text-2xl font-black text-white mb-2 md:mb-4 tracking-tight md:group-hover:text-accent transition-colors duration-500">100% Personnalisable</h4>
+                            <h4 className="text-xl md:text-2xl font-black text-foreground mb-2 md:mb-4 tracking-tight md:group-hover:text-accent transition-colors duration-500">100% Personnalisable</h4>
                             <p className="text-[13px] md:text-sm text-text-muted leading-relaxed font-medium opacity-80 md:group-hover:opacity-100 transition-opacity">
                                 Logo, couleurs et <br /> gravure laser sur-mesure.
                             </p>
@@ -121,7 +121,7 @@ export const CardShowcaseSection = () => {
                             type: "spring",
                             stiffness: 120
                         }}
-                        className="group relative flex flex-col items-center gap-4 md:gap-6 text-center p-8 md:p-10 bg-surface/40 backdrop-blur-3xl rounded-[2.5rem] md:rounded-[3rem] border border-border-custom/50 hover:border-white/20 dark:hover:border-white/20 transition-all duration-500 shadow-2xl overflow-hidden touch-none"
+                        className="group relative flex flex-col items-center gap-4 md:gap-6 text-center p-8 md:p-10 bg-surface/40 backdrop-blur-3xl rounded-[2.5rem] md:rounded-[3rem] border border-border-custom/50 hover:border-foreground/20 transition-all duration-500 shadow-2xl overflow-hidden touch-none"
                     >
                         {/* CUSTOM SPOTLIGHT CURSOR EFFECT */}
                         <div 
@@ -163,7 +163,7 @@ export const CardShowcaseSection = () => {
                     whileHover={{ rotateY: 10, rotateX: -5, scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     transition={{ type: "spring", stiffness: 100 }}
-                    className="relative w-[280px] md:w-[320px] aspect-[9/14] mx-auto bg-gradient-to-br from-[#1a1a1a] to-[#000000] rounded-[2rem] md:rounded-[2.5rem] border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,1)] overflow-hidden flex flex-col p-6 md:p-8 transform-gpu"
+                    className="relative w-[280px] md:w-[320px] lg:w-[360px] aspect-[9/14] mx-auto bg-gradient-to-br from-[#1a1a1a] to-[#000000] rounded-[2rem] md:rounded-[2.5rem] border border-border-custom shadow-[0_30px_60px_-15px_rgba(0,0,0,1)] overflow-hidden flex flex-col p-6 md:p-8 transform-gpu"
                 >
                     {/* Inner texture */}
                     <div className="absolute inset-0 opacity-20 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] blur-[1px]" />
