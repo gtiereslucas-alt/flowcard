@@ -75,7 +75,7 @@ export default function Header() {
           >
             {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
           </motion.button>
-          <Link href="http://localhost:3001/login" className="text-sm font-bold hover:opacity-80 transition-opacity">Se connecter</Link>
+          <Link href="https://flowcard-saas.vercel.app/login" className="text-sm font-bold hover:opacity-80 transition-opacity">Se connecter</Link>
           <Link href="https://calendly.com/lucas-gomestieres-flowcard/30min" target="_blank" rel="noopener noreferrer" className="btn btn-primary text-sm px-6 py-2.5 rounded-full flex items-center gap-2 group relative overflow-hidden">
               <span className="relative z-10">Demander une démo</span>
               <ArrowRight size={16} className="relative z-10 group-hover:translate-x-1 transition-transform" />
@@ -108,8 +108,8 @@ export default function Header() {
               <Link href="/solution" className="text-2xl font-bold tracking-tight w-full pb-4 border-b border-border-custom">Solution</Link>
               <Link href="/roi" className="text-2xl font-bold tracking-tight w-full pb-4 border-b border-border-custom">Calculateur ROI</Link>
               <Link href="/tarifs" className="text-2xl font-bold tracking-tight w-full pb-4 border-b border-border-custom">Tarifs</Link>
-              <Link href="http://localhost:3001/register" className="btn btn-primary w-full mt-4 justify-center py-4 text-lg rounded-xl">S'inscrire Maintenant</Link>
-              <Link href="http://localhost:3001/login" className="text-sm font-bold w-full text-center py-4 text-text-muted hover:text-foreground transition-all">Se connecter</Link>
+              <Link href="https://flowcard-saas.vercel.app/register" className="btn btn-primary w-full mt-4 justify-center py-4 text-lg rounded-xl">S'inscrire Maintenant</Link>
+              <Link href="https://flowcard-saas.vercel.app/login" className="text-sm font-bold w-full text-center py-4 text-text-muted hover:text-foreground transition-all">Se connecter</Link>
             </nav>
           </motion.div>
         )}
