@@ -152,7 +152,7 @@ export const MagicTapSection = () => {
                                 {/* Header / Bannière Cover */}
                                 <div className="w-full h-32 lg:h-44 relative overflow-hidden">
                                     <div className="absolute inset-0 bg-accent/20 z-10 mix-blend-overlay" />
-                                    <div className="absolute inset-0 bg-[url('/profile.jpg')] bg-cover bg-center blur-2xl opacity-50 scale-110" />
+                                    <div className="absolute inset-0 bg-cover bg-center blur-2xl opacity-50 scale-110" style={{backgroundImage:"url('/profile.jpg')"}} />
                                     <div className="absolute bottom-0 left-0 w-full h-20 lg:h-28 bg-gradient-to-t from-surface dark:from-[#050505] to-transparent z-10" />
                                 </div>
 
